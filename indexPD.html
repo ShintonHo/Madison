@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+<meta charset="UTF-8">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Oswald:300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+<title>Precedents Choice</title>
+
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
+body {
+
+}
+
+h1 {
+  text-align: center;
+}
+
+.topbtn {
+  position: fixed;
+  top: 0px; 
+  right: 0px; 
+  z-index: 99; 
+  }
+
+
+.topbtn a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: black; 
+  padding: 2px 10px; 
+  cursor: pointer; 
+  float: right; 
+  border-right: 1px solid black;
+  font-size: 15px;
+  font-family:'Times New Roman',Georgia,Serif;
+}
+
+.topbtn a:hover {
+  background-color: #1a9cd8;
+  color: #FFFFFF; 
+}
+
+button {
+  cursor: pointer;
+}
+
+#portfolio {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2px;
+}
+
+.project {
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+.project img {
+  position: absolute;
+  opacity: 0.9;
+}
+.project p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+.project .grid__title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  bottom: 0;
+  font-weight: 100;
+  font-size: 0.8em;
+  z-index: 3;
+  text-transform: uppercase;
+  color: #1a9cd8;
+  letter-spacing: 2px;
+}
+
+.project:hover .grid__overlay {
+  transform: translateY(0%);
+}
+
+.grid__overlay {
+  background: rgba(26, 156, 216, 0.3);
+  height: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  transform: translateY(101%);
+  transition: all 0.3s ease-in-out;
+}
+.grid__overlay button {
+  background: none;
+  outline: none;
+  font-weight: 100;
+  letter-spacing: 2px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+.grid__overlay button:hover {
+  background: #ffffff;
+  color: #1a9cd8;
+  }
+
+.overlay {
+  position: fixed;
+  background: rgba(71, 69, 69, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 3;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__inner {
+  background: #ffffff;
+  width: 700px;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: black;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family:'Times New Roman',Georgia,Serif;
+}
+.close:hover {
+  color: #1a9cd8;
+}
+
+.project__image {
+  margin-left: -50%;
+}
+
+.introduction h1 {
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 800;
+    font-family:'Times New Roman',Georgia,Serif;
+}
+
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+    <div class="topbtn">
+  <a href="indexPD.html" style="text-decoration: none;">Precedents Choice</a>
+  <a href="indexMP.html" style="text-decoration: none;">New Proposal</a>
+  <a href="indexTL.html" style="text-decoration: none;">History</a>
+  <a href="indexIT.html" style="text-decoration: none;">Madison</a>
+  <a href="index.html" style="text-decoration: none;">Home</a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+    </div>
+    <div class="col-8">
+    <div class="introduction">
+    <h1 style="padding-top: 200px;">Better Madison</h1>
+    <h1 style="padding-bottom: 50px;">Needs Your Help</h1>
+    <p style="text-align: center; font-family:'Times New Roman',Georgia,Serif; font-size: 15px">Please click the precedents that you would love to see in the future waterfront park in Madison, Indiana. </p>
+    <p style="text-align: center; font-family:'Times New Roman',Georgia,Serif; font-size: 15px"> Every help will make great difference to achieve a better Madison community.</p>
+
+    <p style="padding-bottom: 150px; text-align: center; font-family:'Times New Roman',Georgia,Serif; font-size: 15px"> To save the culture. To get a better life.</p>
+   </div>
+   </div>
+   <div class="col-2">
+    </div>
+ </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-10">
+    <div class="introduction">
+    <section id="portfolio">
+<div class="project">
+<img class="project__image" src="precedents/01.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/02.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/03.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/04.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/05.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/06.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/07.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="project">
+<img class="project__image" src="precedents/08.jpg" />
+<div class="grid__overlay">
+<button class="viewbutton">like it</button>
+</div>
+</div>
+<div class="overlay">
+<div class="overlay__inner">
+<button class="close" style="font-family: 'Times New Roman',Georgia,Serif; font-size: 15px; padding-top: 6px;">Back ×</button>
+<p style="padding: 100px 0px; font-family:'Times New Roman',Georgia,Serif; font-size: 50px; font-weight: 800; color: #1a9cd8; text-align: center;">THANK YOU!</p>
+</div>
+</div>
+</section>
+   </div>
+   </div>
+   <div class="col-1">
+    </div>
+ </div>
+</div>
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script id="rendered-js">
+      const buttons = document.querySelectorAll('.project');
+const overlay = document.querySelector('.overlay');
+
+function open(e) {
+  overlay.classList.add('open');
+  const src = e.currentTarget.querySelector('img').src;
+  overlayImage.src = src;
+}
+
+function close() {
+  overlay.classList.remove('open');
+}
+
+buttons.forEach(button => button.addEventListener('click', open));
+overlay.addEventListener('click', close);
+      //# sourceURL=pen.js
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="logo.png" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Oswald:300&display=swap" rel="stylesheet">
+<title>New Waterfront for Madison Indiana</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800'>
+<style>
+  html,
+body,
+.container {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 38px;
+  color: #616161;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.timeline {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.2);
+}
+.timeline .swiper-container {
+  height: 1100px;
+  width: 100%;
+  position: relative;
+}
+.timeline .swiper-wrapper {
+  transition: 2s cubic-bezier(0.68, -0.4, 0.27, 1.34) 0.2s;
+}
+.timeline .swiper-slide {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.timeline .swiper-slide::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -115%;
+  bottom: -10%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: -230px 0 150px 60vw rgba(0, 0, 0, 0.7);
+  border-radius: 100%;
+}
+.timeline .swiper-slide-content {
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  max-width: 310px;
+  right: 50%;
+  top: 13%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
+  font-size: 12px;
+  z-index: 2;
+}
+.timeline .swiper-slide .timeline-year {
+  display: block;
+  color: #1a9cd8;
+  font-size: 42px;
+  margin-bottom: 50px;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  opacity: 0;
+  transition: .2s ease .4s;
+}
+
+
+.timeline .swiper-slide .timeline-title {
+  font-family:"Times New Roman",Georgia,Serif;
+  font-weight: 800;
+  font-size: 34px;
+  margin: 0 0 30px;
+  opacity: 0;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  transition: .2s ease .5s;
+}
+.timeline .swiper-slide .timeline-text {
+  font-family:"Times New Roman",Georgia,Serif;
+  line-height: 1.5;
+  opacity: 0;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  transition: .2s ease .6s;
+}
+
+
+/*new button*/
+.timeline .swiper-slide .timeline-btn {
+  font-family:"Times New Roman",Georgia,Serif;
+  line-height: 1.5;
+  opacity: 0;
+  -webkit-transform: translate3d(20px, 0, 0);
+          transform: translate3d(20px, 0, 0);
+  transition: .2s ease .6s;
+}
+
+.timeline .swiper-slide-active .timeline-year {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: .4s ease 1.6s;
+}
+.timeline .swiper-slide-active .timeline-title {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: .4s ease 1.7s;
+}
+.timeline .swiper-slide-active .timeline-text {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: .4s ease 1.8s;
+}
+
+/*new button 02*/
+.timeline .swiper-slide-active .timeline-btn {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: .4s ease 1.8s;
+}
+
+
+/*right pannel control*/
+.timeline .swiper-pagination {
+  right: 11.5% !important;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+   font-weight: 300;
+  font-size: 18px;
+  z-index: 1;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*the vertical line*/
+.timeline .swiper-pagination::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.timeline .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  text-align: left;
+  opacity: 1;
+  background: transparent;
+  color: white;
+  margin: 15px 0 !important;
+  position: relative;
+}
+
+
+/*blue circle*/
+.timeline .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: -32.5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #1a9cd8;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: .2s;
+}
+.timeline .swiper-pagination-bullet-active {
+  color: #1a9cd8;
+}
+.timeline .swiper-pagination-bullet-active::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.timeline .swiper-button-next,
+.timeline .swiper-button-prev {
+  background-size: 20px 20px;
+  top: 15%;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  z-index: 2;
+  transition: .2s;
+}
+.timeline .swiper-button-prev {
+  left: 8%;
+  background-image: url("./home/blue01.svg");
+}
+.timeline .swiper-button-prev:hover {
+  -webkit-transform: translateX(-4px);
+          transform: translateX(-4px);
+}
+.timeline .swiper-button-next {
+  right: 8%;
+  background-image: url("./home/blue02.svg");
+}
+.timeline .swiper-button-next:hover {
+  -webkit-transform: translateX(4px);
+          transform: translateX(4px);
+}
+@media screen and (min-width: 768px) {
+  .timeline .swiper-slide::after {
+    right: -30%;
+    bottom: -8%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 50vw rgba(0, 0, 0, 0.7);
+  }
+  .timeline .swiper-slide-content {
+    right: 30%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 310px;
+    font-size: 11px;
+    text-align: right;
+  }
+  .timeline .swiper-slide .timeline-year {
+    margin-bottom: 0;
+    font-size: 32px;
+  }
+  .timeline .swiper-slide .timeline-title {
+    font-size: 46px;
+    margin: 0;
+  }
+  .timeline .swiper-pagination {
+    display: flex;
+  }
+  .timeline .swiper-button-prev {
+    top: 35%;
+    left: auto;
+    right: 15%;
+    -webkit-transform: rotate(90deg) translate(0, 10px);
+            transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-prev:hover {
+    -webkit-transform: rotate(90deg) translate(-3px, 10px);
+            transform: rotate(90deg) translate(-3px, 10px);
+  }
+  .timeline .swiper-button-next {
+    top: auto;
+    bottom: 35%;
+    right: 15%;
+    -webkit-transform: rotate(90deg) translate(0, 10px);
+            transform: rotate(90deg) translate(0, 10px);
+  }
+  .timeline .swiper-button-next:hover {
+    -webkit-transform: rotate(90deg) translate(3px, 10px);
+            transform: rotate(90deg) translate(3px, 10px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .timeline .swiper-slide::after {
+    right: -20%;
+    bottom: -12%;
+    width: 240px;
+    height: 50%;
+    box-shadow: -230px 0 150px 39vw rgba(0, 0, 0, 0.7);
+  }
+  .timeline .swiper-slide-content {
+    right: 25%;
+  }
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="container">
+<div class="timeline">
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image: url('home/01.jpg')" data-year="Madison">
+<div class="swiper-slide-content"><span class="timeline-year">Madison</span>
+<h4 class="timeline-title">Historic Site of the United State</h4>
+<p class="timeline-text">Madison is a city in and the county seat of Jefferson County, Indiana, United States, along the Ohio River. In 2006, the majority of Madison's downtown area was designated the largest contiguous National Historic Landmark in the United States—133 blocks of the downtown area is known as the Madison Historic Landmark District.</p>
+<a class="timeline-btn" href="indexIT.html" style="background-color:#1a9cd8; padding: 3px 10px; font-size: 16px; color: white;"=>learn more</a>
+</div>
+</div>
+<div class="swiper-slide" style="background-image: url('home/02.jpg')" data-year="History">
+<div class="swiper-slide-content"><span class="timeline-year">History</span>
+<h4 class="timeline-title">History Timeline</h4>
+<p class="timeline-text">Madison was laid out and platted in 1810, and the first lots were sold in 1811 by John Paul. It had busy early years due to heavy river traffic and its position as an entry point into the Indiana Territory along the historic Old Michigan Road. Madison's location across the Ohio River from Kentucky, a slave state, made it an important location on the Underground Railroad, which worked to free fugitive slaves. George DeBaptiste's barbershop in town became a nerve center of the local group.</p>
+<a class="timeline-btn" href="indexTL.html" style="background-color:#1a9cd8; padding: 3px 10px; font-size: 16px; color: white;"=>learn more</a>
+</div>
+</div>
+<div class="swiper-slide" style="background-image: url('home/03.jpg')" data-year="New Proposal">
+<div class="swiper-slide-content"><span class="timeline-year">New Proposal</span>
+<h4 class="timeline-title">New Waterfront Project</h4>
+<p class="timeline-text">It is an important resource the riverfront is to Madison and the people who live, work, and visit there. The possibilities for extending its local and regional appeal continue to stoke our imagination. The diagrams are a window into some of those possibilities. And while we have our own ideas that we will bring to the table, our job and goal will be to make the community’s vision be realized. We hope our diligence will commitment to Madison’s legacy and the riverfront’s future.</p>
+<a class="timeline-btn" href="indexMP.html" style="background-color:#1a9cd8; padding: 3px 10px; font-size: 16px; color: white;"=>learn more</a>
+</div>
+</div>
+<div class="swiper-slide" style="background-image: url('home/04.jpg')" data-year="Precedents Choice">
+<div class="swiper-slide-content"><span class="timeline-year">Precedents Choice</span>
+<h4 class="timeline-title">Better Madison Needs Your Help</h4>
+<p class="timeline-text">Madison is not only an important transport node in Indiana, but also a precious historic site for the United State. Every resident or visitor have a right to give suggestion for a better future of Madison. Here are some precedents for the new waterfront project. Please help and choose the ones you like. We would like to hear from everyone sincerely. </p>
+<a class="timeline-btn" href="indexPD.html" style="background-color:#1a9cd8; padding: 3px 10px; font-size: 16px; color: white;"=>learn more</a>
+</div>
+</div>
+
+</div>
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+</div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js'></script>
+<script id="rendered-js">
+      var timelineSwiper = new Swiper('.timeline .swiper-container', {
+  direction: 'vertical',
+  loop: false,
+  speed: 1600,
+  pagination: '.swiper-pagination',
+  paginationBulletRender: function (swiper, index, className) {
+    var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+    return '<span class="' + className + '">' + year + '</span>';
+  },
+  paginationClickable: true,
+  nextButton: '.swiper-button-next',
+  prevButton: '.swiper-button-prev',
+  breakpoints: {
+    768: {
+      direction: 'horizontal' } } });
+      //# sourceURL=pen.js
+    </script>
+</body>
+</html>

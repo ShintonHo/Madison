@@ -1,0 +1,13 @@
+font-family: 'Oswald', sans-serif;
+font-family:'Times New Roman',Georgia,Serif;
+
+<link href="https://fonts.googleapis.com/css?family=Oswald|Playfair+Display&display=swap" rel="stylesheet">
+
+
+color: #1a9cd8;
+
+center: [-85.39239, 38.73870],
+zoom: 14.40,
+pitch: 0.00,
+bearing: 0.00
+
